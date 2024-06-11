@@ -30,7 +30,7 @@
     unrar
     renpy
     libreoffice-qt6-still
-    unity
+    unityhub
   ];
 
   # Add system pacakges
