@@ -36,7 +36,7 @@
   # Add system pacakges
   environment.systemPackages = with pkgs; [
     wget
-    git
+    # git
     kitty
     brightnessctl
     ranger

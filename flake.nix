@@ -31,15 +31,14 @@
       ];
     };
 
-    # homeConfigurations = {
-    #   # FIXME replace with your username@hostname
-    #   "jay@nixos" = home-manager.lib.homeManagerConfiguration {
-    #     pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-    #     extraSpecialArgs = {inherit inputs outputs;};
-    #     # > Our main home-manager configuration file <
-    #     modules = [
-    #       ./home.nix
-    #     ];
-    #   };
+    homeConfigurations = {
+      "jay@nixos" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        extraSpecialArgs = {inherit inputs outputs;};
+        # > Our main home-manager configuration file <
+        modules = [
+          ./home.nix
+        ];
+      };
   };
 }
