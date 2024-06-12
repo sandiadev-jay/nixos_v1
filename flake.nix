@@ -1,9 +1,13 @@
 {
-  description = "A simple NixOS flake";
+  description = "NixOS Configuration";
 
   inputs = {
     # NixOS official package source, using the nixos-unstable branch here for a rolling release
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager/release-24.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # hyprland.url = "github:hyprwm/Hyprland";
     # hyprland-plugins = {
     #   url = "github:hyprwm/Hyprland";
@@ -15,7 +19,7 @@
     # };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -28,18 +32,14 @@
         ./xdg-mime.nix
         ./custom-hardware-config.nix # This replaces hardware-configuration.nix
         ./fonts.nix
+        # Home manager as a module of nixos
+        # So home-manager configurations are deployed with nixos-rebuild switch
+        home-manager.nixosModules.home-manager {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.jay = import ./home.nix
+        }
       ];
-    };
-
-    homeConfigurations = {
-      "jay@nixos" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs;};
-        # > Our main home-manager configuration file <
-        modules = [
-          ./home.nix
-        ];
-      };
     };
   };
 }
