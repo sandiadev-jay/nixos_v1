@@ -41,6 +41,7 @@
     julia
     go
     nodejs_22
+    cmake
 
     # wine
     wineWowPackages.waylandFull
@@ -69,6 +70,7 @@
     lsof # list open files
 
     # system tools
+    htop  # system monitor
     btop  # replacement of htop/nmon
     iotop # io monitoring
     iftop # network monitoring
@@ -78,6 +80,18 @@
     pciutils # lspci
     usbutils # lsusb
     mesa-demos # testing hardware acceleration
+    wev  # tool for identifying input keys
+    xcur2png # converst cursors to PNG images
+    wl-clipboard  # clipboard
+    brightnessctl  # screen brightness controller
+
+    # hyprland packages
+    hyprdim
+    hyprshot
+    hyprpicker
+    hyprcursor
+    hyprlandPlugins.hy3
+    xdg-desktop-portal-hyprland
   ];
 
   # basic configuration of git, please change to your own
@@ -87,48 +101,14 @@
     userEmail = "jay.anderson@sandiadev.com";
   };
 
-  # starship - a customizable prompt for any shell
-#   programs.starship = {
-#     enable = true;
-#     # custom settings
-#     settings = {
-#       add_newline = false;
-#       aws.disabled = true;
-#       gcloud.disabled = true;
-#       line_break.disabled = true;
-#     };
-#   };
-
-  # alacritty - a cross-platform, GPU-accelerated terminal emulator
-#   programs.alacritty = {
-#     enable = true;
-#     # custom settings
-#     settings = {
-#       env.TERM = "xterm-256color";
-#       font = {
-#         size = 12;
-#         draw_bold_text_with_bright_colors = true;
-#       };
-#       scrolling.multiplier = 5;
-#       selection.save_to_clipboard = true;
-#     };
-#   };
-
-#   programs.bash = {
-#     enable = true;
-#     enableCompletion = true;
-#     # TODO add your custom bashrc here
-#     bashrcExtra = ''
-#       export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
-#     '';
-
-#     # set some aliases, feel free to add more or remove some
-#     shellAliases = {
-#       k = "kubectl";
-#       urldecode = "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
-#       urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
-#     };
-#   };
+  # Hyprland setup
+  wayland.windowManager.hyprland.enable = true;
+  services.hypridle.enable = true;  
+  programs.waybar.enable = true;
+  programs.hyprlock.enable = true;
+  services.hyprpaper.enable = true;
+  services.swaync.enable = true;
+  programs.wofi.enable = true;
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage

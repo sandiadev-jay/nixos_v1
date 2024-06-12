@@ -104,14 +104,14 @@
 
   # Enable Hyprland
   # programs.hyprland.enable = true;
-  programs.hyprland = {
-    enable = true;
-  };
+  # programs.hyprland = {
+  #   enable = true;
+  # };
 
   # Add plugins for Hyprland
 
   # Enable Waybar (for Hyprland)
-  programs.waybar.enable = true;
+  # programs.waybar.enable = true;
 
   # Enable Sway
   # programs.sway.enable = true;
