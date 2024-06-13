@@ -110,15 +110,6 @@
     userEmail = "jay.anderson@sandiadev.com";
   };
 
-  # Hyprland setup
-  # programs.waybar.enable = true;
-  # programs.hyprlock.enable = true;
-  # services.swaync.enable = true;
-  # programs.wofi.enable = true;
-  # wayland.windowManager.hyprland.enable = true;
-  # wayland.windowManager.hyprland.extraConfig = builtins.readFile ./hyprland.conf;
-
-
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
