@@ -18,7 +18,7 @@
     settings = {
       "$mod" = "SUPER";
 
-      plugins = [ hyprlandPlugins.hy3.packages.x86_64-linux.hy3 ];
+      plugins = [ pkgs.hyprlandPlugins.hy3 ];
 
       plugin = {
         hy3 = {
