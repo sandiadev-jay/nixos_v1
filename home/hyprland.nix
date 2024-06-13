@@ -255,5 +255,4 @@
 
   };
   # wayland.windowManager.hyprland.extraConfig = builtins.readFile ./hyprland.conf;
-  wayland.windowManager.hyprland.systemd.variables = ["--all"];
 }
