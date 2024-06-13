@@ -99,7 +99,7 @@
     hyprshot
     hyprpicker
     hyprcursor
-    hyprlandPlugins.hy3
+    # hyprlandPlugins.hy3
     xdg-desktop-portal-hyprland
   ];
 
