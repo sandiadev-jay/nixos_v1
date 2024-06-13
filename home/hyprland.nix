@@ -255,11 +255,6 @@
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
       ];
-
-
     };
-
-
   };
-  # wayland.windowManager.hyprland.extraConfig = builtins.readFile ./hyprland.conf;
 }
