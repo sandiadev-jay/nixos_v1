@@ -94,6 +94,7 @@
       ];
 
       exec-once = [
+        "waybar"
         "hypridle"
         "swaync"
         "polkit-agent-helper-1"
@@ -118,6 +119,10 @@
           natural_scroll = true;
           disable_while_typing = true;
         };
+      };
+
+      gestures = {
+        workspace_swipe = true;
       };
 
       bind = [
