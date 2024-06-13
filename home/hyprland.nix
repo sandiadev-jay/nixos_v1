@@ -7,18 +7,21 @@
   services.swaync.enable = true;
   programs.wofi.enable = true;
   
-  # Hyprland config
+  # Hyprland setup
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
     systemd.variables = ["--all"];
     xwayland.enable = true;
 
+    # Hyprland plugins
+    plugins = [
+      pkgs.hyprlandPlugins.hy3
+    ];
 
+    # Hyprland config 
     settings = {
       "$mod" = "SUPER";
-
-      plugins = [ pkgs.hyprlandPlugins.hy3 ];
 
       plugin = {
         hy3 = {
