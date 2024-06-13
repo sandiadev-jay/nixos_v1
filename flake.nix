@@ -38,7 +38,7 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension = "backup";
-          home-manager.users.jay = import ./home.nix;
+          home-manager.users.jay = import ./home;
         }
       ];
     };

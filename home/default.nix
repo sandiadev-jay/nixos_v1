@@ -4,7 +4,7 @@
 
   # Imports for modulization
   imports = [
-    ./home
+    ./hypridle.nix
   ];
   
   # TODO please change the username & home directory to your own
