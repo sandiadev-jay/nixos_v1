@@ -229,10 +229,6 @@
         "$mod, mouse_down, workspace, e+1"
         "$mod, mouse_up, workspace, e-1"
 
-        # Move/resize windows with LMB/RMB and mod
-        "$mod, mouse:272, movewindow"
-        "$mod, mouse:273, resizewindow"
-
         # Volume controls
         ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+"
         ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%-"
@@ -247,6 +243,12 @@
 
         # Screen lock shortcut
         "$mod, L, exec, pidof hyprlock || (loginctl lock-session)"
+      ];
+
+      bindm = [
+        # Move/resize windows with LMB/RMB and mod
+        "$mod, mouse:272, movewindow"
+        "$mod, mouse:273, resizewindow"
       ];
 
 
