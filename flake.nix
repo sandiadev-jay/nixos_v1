@@ -8,15 +8,6 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # hyprland.url = "github:hyprwm/Hyprland";
-    # hyprland-plugins = {
-    #   url = "github:hyprwm/Hyprland";
-    #   inputs.hyprland.follows = "hyprland";
-    # };
-    # hyprland-hy3 = {
-    #   url = "github:outfoxxed/hy3";
-    #   inputs.hyprland.follows = "hyprland";
-    # };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {

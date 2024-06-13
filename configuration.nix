@@ -18,10 +18,10 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Setting up Cachix for Hyprland flake
-  nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
-  };
+  # nix.settings = {
+  #   substituters = ["https://hyprland.cachix.org"];
+  #   trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+  # };
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -103,7 +103,7 @@
   services.upower.enable = true; 
 
   # Enable Hyprland
-  # programs.hyprland.enable = true;
+  programs.hyprland.enable = true;
   # programs.hyprland = {
   #   enable = true;
   # };
