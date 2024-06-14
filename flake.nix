@@ -16,7 +16,7 @@
 
   };
 
-  outputs = { self, nixpkgs, home-manager, hyprland, hy3, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
