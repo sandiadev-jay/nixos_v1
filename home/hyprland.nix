@@ -197,6 +197,7 @@
       ];
 
       exec-once = [
+        "1password"
         "waybar"
         "hypridle"
         "swaync"
