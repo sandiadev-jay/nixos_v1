@@ -1,4 +1,4 @@
-{ hy3, config, pkgs, ... }:
+{ hyprland, hy3, config, pkgs, ... }:
 
 {
   # Ancillary service enablement
