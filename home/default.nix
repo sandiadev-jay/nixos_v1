@@ -61,8 +61,6 @@
     musescore
     gimp
     obs-studio
-    renpy
-    unityhub
 
     # configuration
     nwg-look
