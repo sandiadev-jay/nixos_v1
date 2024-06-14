@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   # Ancillary service enablement
@@ -16,7 +16,7 @@
 
     # Hyprland plugins
     plugins = [
-      pkgs.hyprlandPlugins.hy3
+      inputs.hy3.packages.${pkgs.system}.hy3
     ];
 
     # Hyprland config 
