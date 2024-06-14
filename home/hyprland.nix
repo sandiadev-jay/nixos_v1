@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ hyprland, hy3, config, pkgs, ... }:
 
 {
   # Ancillary service enablement
@@ -6,7 +6,8 @@
   programs.hyprlock.enable = true;
   services.swaync.enable = true;
   programs.wofi.enable = true;
-  
+
+  imports = [ hyprland.nixosModules.default ];
   # Hyprland setup
   wayland.windowManager.hyprland = {
     enable = true;
