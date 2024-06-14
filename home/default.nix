@@ -96,9 +96,9 @@
     hyprdim
     hyprshot
     hyprpicker
-    hyprcursor
+    # hyprcursor
     # hyprlandPlugins.hy3
-    xdg-desktop-portal-hyprland
+    # xdg-desktop-portal-hyprland
   ];
 
   # basic configuration of git, please change to your own
