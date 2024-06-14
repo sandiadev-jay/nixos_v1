@@ -8,18 +8,18 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    myhyprland = {
+    hyprland = {
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hy3 = {
       url = "github:outfoxxed/hy3";
-      inputs.hyprland.follows = "myhyprland";
+      inputs.hyprland.follows = "hyprland";
     };
 
   };
 
-  outputs = { self, nixpkgs, home-manager, myhyprland, hy3, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, hyprland, hy3, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
