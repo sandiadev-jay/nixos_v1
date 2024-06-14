@@ -19,7 +19,7 @@
       # Set background image
       background = {
         monitor = "";
-        path = "/home/jay/Documents/Backgrounds/kids_cloudcroft.jpg";
+        path = "/home/jay/Documents/Backgrounds/britt_kids_hiking_sandiacave.jpg";
       };
 
       # Input field settings
