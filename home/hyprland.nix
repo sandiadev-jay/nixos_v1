@@ -7,7 +7,7 @@
   services.swaync.enable = true;
   programs.wofi.enable = true;
 
-  imports = [ inputs.hyprland.homeManagerModules.default ];
+  # imports = [ inputs.hyprland.homeManagerModules.default ];
   # Hyprland setup
   programs.hyprland.enable = true;
   wayland.windowManager.hyprland = {
