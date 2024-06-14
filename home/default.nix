@@ -93,9 +93,9 @@
     brightnessctl  # screen brightness controller
 
     # hyprland packages
-    hyprdim
-    hyprshot
-    hyprpicker
+    # hyprdim
+    # hyprshot
+    # hyprpicker
     # hyprcursor
     # hyprlandPlugins.hy3
     # xdg-desktop-portal-hyprland
