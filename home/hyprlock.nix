@@ -10,7 +10,7 @@
 
       general = {
         disable_loading_bar = false;
-        grace = 10;
+        grace = 3;
         no_fade_in = false;
         no_fade_out = false;
         hide_cursor = true;
