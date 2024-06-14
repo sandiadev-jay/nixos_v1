@@ -103,7 +103,7 @@
   services.upower.enable = true; 
 
   # Enable Hyprland
-  # programs.hyprland.enable = true;
+  programs.hyprland.enable = true;
 
   # For wayland environments
   environment.sessionVariables.NIXOS_OZONE_WL = "1";

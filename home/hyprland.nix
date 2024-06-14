@@ -8,7 +8,6 @@
 
   imports = [ inputs.hyprland.homeManagerModules.default ];
   # Hyprland setup
-  programs.hyprland.enable = true;
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
