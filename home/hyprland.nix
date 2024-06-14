@@ -10,7 +10,7 @@
   # Hyprland setup
   wayland.windowManager.hyprland = {
     enable = true;
-    package = inputs.hyprland.${pkgs.system}.hyprland;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     systemd.enable = true;
     systemd.variables = ["--all"];
     xwayland.enable = true;
