@@ -6,7 +6,8 @@
   imports = [
     ./hypridle.nix
     ./hyprpaper.nix
-    ./hyprland.nix
+    ./hyprland.nix 
+    ./hyprlock.nix
   ];
   
   # TODO please change the username & home directory to your own
