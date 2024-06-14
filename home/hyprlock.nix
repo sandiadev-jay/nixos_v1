@@ -50,8 +50,8 @@
         swap_font_color = false; # see below
 
         position = "0, -20";
-        halign = center;
-        valign = center;
+        halign = "center";
+        valign = "center";
       };
 
       # Labels
