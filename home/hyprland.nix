@@ -1,4 +1,4 @@
-{ hyprland, hy3, config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   # Ancillary service enablement
@@ -7,7 +7,7 @@
   services.swaync.enable = true;
   programs.wofi.enable = true;
 
-  imports = [ hyprland.homeManagerModules.default ];
+  imports = [ inputs.hyprland.homeManagerModules.default ];
   # Hyprland setup
   programs.hyprland.enable = true;
   wayland.windowManager.hyprland = {
@@ -18,7 +18,7 @@
 
     # Hyprland plugins
     plugins = [
-      hy3.packages.${pkgs.system}.hy3
+      inputs.hy3.packages.${pkgs.system}.hy3
     ];
 
     # Hyprland config 
