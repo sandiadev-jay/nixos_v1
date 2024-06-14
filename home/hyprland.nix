@@ -15,9 +15,9 @@
     xwayland.enable = true;
 
     # Hyprland plugins
-    plugins = [
-      inputs.hy3.packages.${pkgs.system}.hy3
-    ];
+    # plugins = [
+    #   inputs.hy3.packages.${pkgs.system}.hy3
+    # ];
 
     # Hyprland config 
     settings = {
