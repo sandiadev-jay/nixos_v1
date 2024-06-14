@@ -103,7 +103,7 @@
   services.upower.enable = true; 
 
   # Enable Hyprland
-  # programs.hyprland.enable = true;  (pulling this from flake in home manager?)
+  programs.hyprland.enable = true;
 
   # Add plugins for Hyprland
 
