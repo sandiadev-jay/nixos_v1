@@ -105,14 +105,6 @@
   # Enable Hyprland
   programs.hyprland.enable = true;
 
-  # Add plugins for Hyprland
-
-  # Enable Waybar (for Hyprland)
-  # programs.waybar.enable = true;
-
-  # Enable Sway
-  # programs.sway.enable = true;
-  
   # For wayland environments
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 

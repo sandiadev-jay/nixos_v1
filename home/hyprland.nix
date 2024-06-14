@@ -3,7 +3,6 @@
 {
   # Ancillary service enablement
   programs.waybar.enable = true;
-  programs.hyprlock.enable = true;
   services.swaync.enable = true;
   programs.wofi.enable = true;
 
