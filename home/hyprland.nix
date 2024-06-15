@@ -360,7 +360,7 @@
         # Hy3 binds
         "$mod, V, hy3:makegroup, v,"
         "$mod, H, hy3:makegroup, h,"
-        "$mod, T, hy3:makegroup, t,"
+        "$mod, T, hy3:makegroup, tab,"
         "$mod, A, hy3:changefocus, raise"
         "$mod SHIFT, A, hy3:changefocus, lower"
         "$mod, J, hy3:changegroup, opposite"  # Hy3
