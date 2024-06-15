@@ -361,7 +361,10 @@
         "$mod, V, hy3:makegroup, v, ephemeral"
         "$mod, H, hy3:makegroup, h, ephemeral"
         "$mod, T, hy3:makegroup, t, ephemeral"
-
+        "$mod, A, hy3:changefocus, raise"
+        "$mod SHIFT, A, hy3:changefocus, raise"
+        "$mod, J, hy3:changegroup, opposite"  # Hy3
+        "$mod SHIFT, T, hy3:changegroup, toggletab"
       ];
 
       bindm = [
