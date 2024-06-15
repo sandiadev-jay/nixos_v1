@@ -367,7 +367,7 @@
       bindm = [
         # Move/resize windows with LMB/RMB and mod
         "$mod, mouse:272, movewindow"
-        "$mod, mouse:273, resizewindow"movefocus
+        "$mod, mouse:273, resizewindow"
       ];
 
       bindn = [
