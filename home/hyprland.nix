@@ -251,10 +251,10 @@
         "$mod, J, togglesplit,"  # dwindle
         
         # Move focus
-        "$mod, left, movefocus, l"
-        "$mod, right, movefocus, r"
-        "$mod, up, movefocus, u"
-        "$mod, down, movefocus, d"
+        "$mod, left, hy3:movefocus, l"
+        "$mod, right, hy3:movefocus, r"
+        "$mod, up, hy3:movefocus, u"
+        "$mod, down, hy3:movefocus, d"
 
         # Move window
         "$mod SHIFT, left, hy3:movewindow, l"
