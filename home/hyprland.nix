@@ -123,8 +123,8 @@
       };
 
       general = {
-        gaps_in = 4;
-        gaps_out = 2;
+        gaps_in = 2;
+        gaps_out = 4;
         border_size = 2;
         "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
         "col.inactive_border" = "rgba(595959aa)";
@@ -257,10 +257,10 @@
         "$mod, down, movefocus, d"
 
         # Move window
-        "$mod SHIFT, left, movewindow, l"
-        "$mod SHIFT, right, movewindow, r"
-        "$mod SHIFT, up, movewindow, u"
-        "$mod SHIFT, down, movewindow, d"
+        "$mod SHIFT, left, hy3:movewindow, l"
+        "$mod SHIFT, right, hy3:movewindow, r"
+        "$mod SHIFT, up, hy3:movewindow, u"
+        "$mod SHIFT, down, hy3:movewindow, d"
 
         # Move workspace in a certain direction
         "$mod ALT CTRL, left, movecurrentworkspacetomonitor, l"
@@ -291,48 +291,48 @@
         "$mod, KP_INSERT, workspace, 10"
 
         # Move active window to a workspace
-        "$mod SHIFT, 1, movetoworkspace, 1"
-        "$mod SHIFT, 2, movetoworkspace, 2"
-        "$mod SHIFT, 3, movetoworkspace, 3"
-        "$mod SHIFT, 4, movetoworkspace, 4"
-        "$mod SHIFT, 5, movetoworkspace, 5"
-        "$mod SHIFT, 6, movetoworkspace, 6"
-        "$mod SHIFT, 7, movetoworkspace, 7"
-        "$mod SHIFT, 8, movetoworkspace, 8"
-        "$mod SHIFT, 9, movetoworkspace, 9"
-        "$mod SHIFT, 0, movetoworkspace, 10"
-        "$mod SHIFT, KP_END, movetoworkspace, 1"
-        "$mod SHIFT, KP_DOWN, movetoworkspace, 2"
-        "$mod SHIFT, KP_NEXT, movetoworkspace, 3"
-        "$mod SHIFT, KP_LEFT, movetoworkspace, 4"
-        "$mod SHIFT, KP_BEGIN, movetoworkspace, 5"
-        "$mod SHIFT, KP_RIGHT, movetoworkspace, 6"
-        "$mod SHIFT, KP_HOME, movetoworkspace, 7"
-        "$mod SHIFT, KP_UP, movetoworkspace, 8"
-        "$mod SHIFT, KP_PRIOR, movetoworkspace, 9"
-        "$mod SHIFT, KP_INSERT, movetoworkspace, 10"
+        "$mod SHIFT, 1, hy3:movetoworkspace, 1, follow"
+        "$mod SHIFT, 2, hy3:movetoworkspace, 2, follow"
+        "$mod SHIFT, 3, hy3:movetoworkspace, 3, follow"
+        "$mod SHIFT, 4, hy3:movetoworkspace, 4, follow"
+        "$mod SHIFT, 5, hy3:movetoworkspace, 5, follow"
+        "$mod SHIFT, 6, hy3:movetoworkspace, 6, follow"
+        "$mod SHIFT, 7, hy3:movetoworkspace, 7, follow"
+        "$mod SHIFT, 8, hy3:movetoworkspace, 8, follow"
+        "$mod SHIFT, 9, hy3:movetoworkspace, 9, follow"
+        "$mod SHIFT, 0, hy3:movetoworkspace, 10, follow"
+        "$mod SHIFT, KP_END, hy3:movetoworkspace, 1, follow"
+        "$mod SHIFT, KP_DOWN, hy3:movetoworkspace, 2, follow"
+        "$mod SHIFT, KP_NEXT, hy3:movetoworkspace, 3, follow"
+        "$mod SHIFT, KP_LEFT, hy3:movetoworkspace, 4, follow"
+        "$mod SHIFT, KP_BEGIN, hy3:movetoworkspace, 5, follow"
+        "$mod SHIFT, KP_RIGHT, hy3:movetoworkspace, 6, follow"
+        "$mod SHIFT, KP_HOME, hy3:movetoworkspace, 7, follow"
+        "$mod SHIFT, KP_UP, hy3:movetoworkspace, 8, follow"
+        "$mod SHIFT, KP_PRIOR, hy3:movetoworkspace, 9, follow"
+        "$mod SHIFT, KP_INSERT, hy3:movetoworkspace, 10, follow"
 
         # Move active window but don't follow
-        "$mod CTRL SHIFT, 1, movetoworkspacesilent, 1"
-        "$mod CTRL SHIFT, 2, movetoworkspacesilent, 2"
-        "$mod CTRL SHIFT, 3, movetoworkspacesilent, 3"
-        "$mod CTRL SHIFT, 4, movetoworkspacesilent, 4"
-        "$mod CTRL SHIFT, 5, movetoworkspacesilent, 5"
-        "$mod CTRL SHIFT, 6, movetoworkspacesilent, 6"
-        "$mod CTRL SHIFT, 7, movetoworkspacesilent, 7"
-        "$mod CTRL SHIFT, 8, movetoworkspacesilent, 8"
-        "$mod CTRL SHIFT, 9, movetoworkspacesilent, 9"
-        "$mod CTRL SHIFT, 0, movetoworkspacesilent, 10"
-        "$mod CTRL SHIFT, KP_END, movetoworkspacesilent, 1"
-        "$mod CTRL SHIFT, KP_DOWN, movetoworkspacesilent, 2"
-        "$mod CTRL SHIFT, KP_NEXT, movetoworkspacesilent, 3"
-        "$mod CTRL SHIFT, KP_LEFT, movetoworkspacesilent, 4"
-        "$mod CTRL SHIFT, KP_BEGIN, movetoworkspacesilent, 5"
-        "$mod CTRL SHIFT, KP_RIGHT, movetoworkspacesilent, 6"
-        "$mod CTRL SHIFT, KP_HOME, movetoworkspacesilent, 7"
-        "$mod CTRL SHIFT, KP_UP, movetoworkspacesilent, 8"
-        "$mod CTRL SHIFT, KP_PRIOR, movetoworkspacesilent, 9"
-        "$mod CTRL SHIFT, KP_INSERT, movetoworkspacesilent, 10"
+        "$mod CTRL SHIFT, 1, hy3:movetoworkspace, 1"
+        "$mod CTRL SHIFT, 2, hy3:movetoworkspace, 2"
+        "$mod CTRL SHIFT, 3, hy3:movetoworkspace, 3"
+        "$mod CTRL SHIFT, 4, hy3:movetoworkspace, 4"
+        "$mod CTRL SHIFT, 5, hy3:movetoworkspace, 5"
+        "$mod CTRL SHIFT, 6, hy3:movetoworkspace, 6"
+        "$mod CTRL SHIFT, 7, hy3:movetoworkspace, 7"
+        "$mod CTRL SHIFT, 8, hy3:movetoworkspace, 8"
+        "$mod CTRL SHIFT, 9, hy3:movetoworkspace, 9"
+        "$mod CTRL SHIFT, 0, hy3:movetoworkspace, 10"
+        "$mod CTRL SHIFT, KP_END, hy3:movetoworkspace, 1"
+        "$mod CTRL SHIFT, KP_DOWN, hy3:movetoworkspace, 2"
+        "$mod CTRL SHIFT, KP_NEXT, hy3:movetoworkspace, 3"
+        "$mod CTRL SHIFT, KP_LEFT, hy3:movetoworkspace, 4"
+        "$mod CTRL SHIFT, KP_BEGIN, hy3:movetoworkspace, 5"
+        "$mod CTRL SHIFT, KP_RIGHT, hy3:movetoworkspace, 6"
+        "$mod CTRL SHIFT, KP_HOME, hy3:movetoworkspace, 7"
+        "$mod CTRL SHIFT, KP_UP, hy3:movetoworkspace, 8"
+        "$mod CTRL SHIFT, KP_PRIOR, hy3:movetoworkspace, 9"
+        "$mod CTRL SHIFT, KP_INSERT, hy3:movetoworkspace, 10"
 
         # Scratchpad workspace
         "$mod, S, togglespecialworkspace, magic"
@@ -358,11 +358,11 @@
         "$mod, L, exec, pidof hyprlock || (loginctl lock-session)"
 
         # Hy3 binds
-        "$mod, V, hy3:makegroup, v, ephemeral"
-        "$mod, H, hy3:makegroup, h, ephemeral"
-        "$mod, T, hy3:makegroup, t, ephemeral"
+        "$mod, V, hy3:makegroup, v,"
+        "$mod, H, hy3:makegroup, h,"
+        "$mod, T, hy3:makegroup, t,"
         "$mod, A, hy3:changefocus, raise"
-        "$mod SHIFT, A, hy3:changefocus, raise"
+        "$mod SHIFT, A, hy3:changefocus, lower"
         "$mod, J, hy3:changegroup, opposite"  # Hy3
         "$mod SHIFT, T, hy3:changegroup, toggletab"
       ];
