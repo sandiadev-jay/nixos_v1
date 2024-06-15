@@ -123,8 +123,8 @@
       };
 
       general = {
-        gaps_in = 0;
-        gaps_out = 0;
+        gaps_in = 4;
+        gaps_out = 2;
         border_size = 2;
         "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
         "col.inactive_border" = "rgba(595959aa)";
@@ -133,7 +133,7 @@
       };
 
       decoration = {
-        rounding = 0;
+        rounding = 5;
         blur = {
           enabled = true;
           size = 3;
@@ -149,7 +149,7 @@
         enabled = true;
         bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
         animation = [
-          "windows, 0, 7, myBezier"
+          "windowsIn, 0, 7, myBezier"
           "windowsOut, 0, 7, default, popin 80%"
           "border, 0, 10, default"
           "borderangle, 0, 8, default"
@@ -228,6 +228,9 @@
 
       gestures = {
         workspace_swipe = true;
+        workspace_swipe_fingers = 4;
+        workspace_swipe_forever = true;
+        workspace_swipe_cancel_ratio = 0.4;
       };
 
       bind = [
@@ -353,12 +356,24 @@
 
         # Screen lock shortcut
         "$mod, L, exec, pidof hyprlock || (loginctl lock-session)"
+
+        # Hy3 binds
+        "$mod, V, hy3:makegroup, v, ephemeral"
+        "$mod, H, hy3:makegroup, h, ephemeral"
+        "$mod, T, hy3:makegroup, t, ephemeral"
+
       ];
 
       bindm = [
         # Move/resize windows with LMB/RMB and mod
         "$mod, mouse:272, movewindow"
-        "$mod, mouse:273, resizewindow"
+        "$mod, mouse:273, resizewindow"movefocus
+      ];
+
+      bindn = [
+        ", mouse:272, hy3:focustab, mouse"
+        ", mouse_down, hy3:focustab, l, require_hovered"
+        ", mouse_up, hy3:focustab, r, require_hovered"
       ];
     };
   };
