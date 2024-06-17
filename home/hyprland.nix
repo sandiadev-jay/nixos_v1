@@ -180,9 +180,9 @@
       };
 
       # Master is alternate, new is master
-      master = {
-        new_is_master = true;
-      };
+      # master = {
+      #   new_is_master = true;
+      # };
 
       misc = {
         force_default_wallpaper = 0;
