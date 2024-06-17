@@ -11,7 +11,7 @@
       general = {
         disable_loading_bar = false;
         grace = 3;
-        no_fade_in = false;
+        no_fade_in = true;
         no_fade_out = false;
         hide_cursor = true;
       };
