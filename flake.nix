@@ -16,10 +16,11 @@
       url = "github:outfoxxed/hy3";
       inputs.hyprland.follows = "hyprland";
     };
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
   };
 
-  outputs = { self, nixpkgs, home-manager, hyprland, hy3, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, hyprland, hy3, nixos-hardware, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -32,6 +33,8 @@
         ./xdg-mime.nix
         ./custom-hardware-config.nix # This replaces hardware-configuration.nix
         ./fonts.nix
+        # Dell XPS Customizations
+        nixos-hardware.nixosModules.dell-xps-15-9520-nvidia
         # Home manager as a module of nixos
         # So home-manager configurations are deployed with nixos-rebuild switch
         home-manager.nixosModules.home-manager {
