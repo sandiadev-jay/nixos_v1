@@ -204,7 +204,7 @@
         "swaync"
         "polkit-agent-helper-1"
         "systemctl start --user polkit-gnome-authentication-agent-1"
-        ''hyprctl setcursor "McMojave Cursors" 24''
+        ''hyprctl setcursor "McMojave-cursors" 24''
       ];
 
       env = [
