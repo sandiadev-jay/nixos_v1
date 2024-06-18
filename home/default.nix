@@ -96,7 +96,7 @@
     brightnessctl  # screen brightness controller
 
     # networkingish
-    samba4full  # For file sharing between computers on the same network
+    samba4Full  # For file sharing between computers on the same network
 
   ];
 
