@@ -95,13 +95,9 @@
     wl-clipboard  # clipboard
     brightnessctl  # screen brightness controller
 
-    # hyprland packages
-    # hyprdim
-    # hyprshot
-    # hyprpicker
-    # hyprcursor
-    # hyprlandPlugins.hy3
-    # xdg-desktop-portal-hyprland
+    # networkingish
+    samba4full  # For file sharing between computers on the same network
+
   ];
 
   # basic configuration of git, please change to your own
