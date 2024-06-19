@@ -141,7 +141,7 @@
     description = "Jay Anderson";
     extraGroups = [ "networkmanager" "wheel" ];
     openssh.authorizedKeys.keyFiles = [
-      /home/jay/.ssh/hosted_public_keys
+      ./ssh_authorized_keys
     ];
   };
 
