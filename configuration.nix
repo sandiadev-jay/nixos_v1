@@ -141,7 +141,7 @@
     description = "Jay Anderson";
     extraGroups = [ "networkmanager" "wheel" ];
     openssh.authorizedKeys.keyFiles = [
-      ./ssh_authorized_keys
+      ./ssh_authorized_keys/jay-ppi-mbpro.pub
     ];
   };
 
