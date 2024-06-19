@@ -142,6 +142,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     openssh.authorizedKeys.keyFiles = [
       ./ssh_authorized_keys/jay-ppi-mbpro.pub
+      ./ssh_authorized_keys/jay-xps-nixos.pub
     ];
   };
 
