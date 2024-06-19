@@ -140,6 +140,9 @@
     isNormalUser = true;
     description = "Jay Anderson";
     extraGroups = [ "networkmanager" "wheel" ];
+    openssh.authorizedKeys.keyFiles = [
+      /home/jay/.ssh/hosted_public_keys
+    ];
   };
 
   # Allow unfree packages
@@ -185,7 +188,7 @@
     settings = {
       X11Forwarding = true;
       PermitRootLogin = "no";  # disable root login
-      PasswordAuthentication = false;  # disable password login
+      PasswordAuthentication = false;  # disable/enable password login
     };
   };
 
