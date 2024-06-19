@@ -96,7 +96,7 @@
     brightnessctl  # screen brightness controller
 
     # networking
-    samba4Full  # For file sharing between computers on the same network
+    # samba4Full  # For file sharing between computers on the same network
     nmap  # For viewing devices connected to the network
   ];
 
