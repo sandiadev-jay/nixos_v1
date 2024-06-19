@@ -94,7 +94,7 @@
     xcur2png # converst cursors to PNG images
     wl-clipboard  # clipboard
     brightnessctl  # screen brightness controller
-    tilde  # command line text editor
+    micro  # command line text editor
 
     # networking
     # samba4Full  # For file sharing between computers on the same network
