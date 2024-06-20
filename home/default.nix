@@ -50,6 +50,8 @@
     go
     nodejs_22
     cmake
+    python312
+    python312Packages.conda
 
     # wine
     wineWowPackages.waylandFull
