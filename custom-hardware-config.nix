@@ -33,7 +33,7 @@
   # Partition swapfile is on (after LUKS decryption)
   boot.resumeDevice = "/dev/disk/by-uuid/4b7bc006-9c2f-4a56-9984-8f515c20a4cf";
   # Resume Offset is offset of swapfile
-  boot.kernelParams = [ "resume_offset=32870400" ];
+  boot.kernelParams = [ "resume_offset=32870400" "i915.enable_guc=2" ];
 
 
   # Having kernel security enabled prevents hibernation
