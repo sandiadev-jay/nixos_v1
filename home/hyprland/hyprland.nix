@@ -2,7 +2,7 @@
 
 {
   # Ancillary service enablement
-  programs.waybar.enable = true;
+  # programs.waybar.enable = true;
   services.swaync.enable = true;
   programs.wofi.enable = true;
 
@@ -359,7 +359,7 @@
 
         # Hy3 binds
         "$mod, V, hy3:makegroup, v,"
-        "$mod, H, hy3:makegroup, h,"
+        "$mod, B, hy3:makegroup, h,"
         "$mod, T, hy3:makegroup, tab,"
         "$mod, A, hy3:changefocus, raise"
         "$mod SHIFT, A, hy3:changefocus, lower"

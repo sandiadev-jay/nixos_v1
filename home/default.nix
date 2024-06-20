@@ -4,10 +4,8 @@
 
   # Imports for modulization
   imports = [
-    ./hypridle.nix
-    ./hyprpaper.nix
-    ./hyprland.nix 
-    ./hyprlock.nix
+    ./hyprland
+    ./mime
   ];
   
   # TODO please change the username & home directory to your own
