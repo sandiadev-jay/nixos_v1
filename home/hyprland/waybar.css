@@ -95,9 +95,7 @@ button:hover {
     color: #ffffff;
 }
 
-#window {
-    margin: auto;
-}
+#window,
 
 #workspaces {
     margin: 0 5px 0 5px;
