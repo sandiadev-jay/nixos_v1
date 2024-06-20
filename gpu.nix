@@ -65,9 +65,10 @@
 
   # Also putting config for the Intel GPU in here
   # xe requires linux kernelt 6.8 or newer (running 6.9.4)
-  hardware.intelgpu.driver = "xe";  # Try out the new "xe" driver (other option "i915")
-  hardware.intelgpu.loadInInitrd = true;  # Load the Intel GPU kernel module at stage 1 boot (added to 'boot.initrd.kernelModules').
-  boot.initrd.kernelModules = [ config.hardware.intelgpu.driver ];
+  # Trying out the new "xe" driver (other option "i915")
+  # Load the Intel GPU kernel module at stage 1 boot (added to 'boot.initrd.kernelModules').
+  boot.initrd.kernelModules = [ "xe" ];
+  
   environment.variables = {
     VDPAU_DRIVER = "va_gl";
   };
