@@ -14,14 +14,14 @@
       # url = "github:hyprwm/Hyprland?submodules=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hy3 = {
-      url = "github:outfoxxed/hy3";  # Main Branch (Latest)
-      # url = "github:outfoxxed/hy3?rev=5693ea255455c0c35d97353031de80def61f1e15";  # (v0.41.0) versions used because of build errors
-      inputs.hyprland.follows = "hyprland";
-    };
+    # hy3 = {
+    #   url = "github:outfoxxed/hy3";  # Main Branch (Latest)
+    #   # url = "github:outfoxxed/hy3?rev=5693ea255455c0c35d97353031de80def61f1e15";  # (v0.41.0) versions used because of build errors
+    #   inputs.hyprland.follows = "hyprland";
+    # };
   };
 
-  outputs = { self, nixpkgs, home-manager, hyprland, hy3, nixos-hardware, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, hyprland, nixos-hardware, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
