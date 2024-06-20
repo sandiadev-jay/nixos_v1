@@ -96,7 +96,7 @@ button:hover {
 }
 
 #window {
-    text-align: center;
+    margin: auto;
 }
 
 #workspaces {
