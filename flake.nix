@@ -10,12 +10,12 @@
     };
     hyprland = {
       # url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-      url = "git+https://github.com/hyprwm/Hyprland?ref/tag/v0.41.0?submodules=1";
+      url = "git+https://github.com/hyprwm/Hyprland?ref=v0.41.0&submodules=1";
       # url = "github:hyprwm/Hyprland?submodules=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hy3 = {
-      url = "github:outfoxxed/hy3?ref/tag/hl0.41.0";
+      url = "github:outfoxxed/hy3?ref=hl0.41.0";
       inputs.hyprland.follows = "hyprland";
     };
   };
