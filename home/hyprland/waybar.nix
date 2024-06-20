@@ -39,7 +39,6 @@
           # "hyprland/language"
           "battery"
           # "battery#bat2"
-          "clock"
         ];
 
         # Module configurations
