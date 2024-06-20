@@ -92,9 +92,9 @@
 
   # Configure suspend-then-hibernate settings
   services.logind = {
-    lidSwitch = "suspend-then-hibernate";
+    lidSwitch = "hybrid-sleep";
     extraConfig = ''
-      HandlePowerKey=suspend-then-hibernate
+      HandlePowerKey=hibernate
     '';
   };
   systemd.sleep.extraConfig = "HibernateDelaySec=2h";  
