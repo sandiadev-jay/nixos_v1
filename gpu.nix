@@ -7,6 +7,16 @@
     enable = true;
     driSupport = true;
     driSupport32Bit = true;
+    extraPackages = with pkgs; [
+      intel-vaapi-driver
+      libvdpau-va-gl
+      intel-media-driver
+    ]; 
+    extraPackages32 = with pkgs; [
+      intel-vaapi-driver
+      libvdpau-va-gl
+      intel-media-driver
+    ]
   };
 
   # Load nvidia driver for Xorg and Wayland
@@ -45,61 +55,20 @@
 
     # Laptop required config for dual GPU setup
     prime = {
-      sync.enable = lib.mkOverride 990 true;
+      sync.enable = true;
       # Make sure to use the correct Bus ID values for your system!
-      intelBusId = lib.mkDefault "PCI:0:2:0";
-      nvidiaBusId = lib.mkDefault "PCI:1:0:0";
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:1:0:0";
     };
 
   };
 
   # Also putting config for the Intel GPU in here
-  options.hardware.intelgpu.driver = lib.mkOption {
-    description = "Intel GPU driver to use";
-    type = lib.types.enum [
-      "i915"
-      "xe"
-    ];
-    default = "xe";  # Try out the new xe driver
+  # xe requires linux kernelt 6.8 or newer (running 6.9.4)
+  hardware.intelgpu.driver = "xe";  # Try out the new "xe" driver (other option "i915")
+  hardware.intelgpu.loadInInitrd = true;  # Load the Intel GPU kernel module at stage 1 boot (added to 'boot.initrd.kernelModules').
+  boot.initrd.kernelModules = [ config.hardware.intelgpu.driver ];
+  environment.variables = {
+    VDPAU_DRIVER = "va_gl";
   };
-
-  options.hardware.intelgpu.loadInInitrd =
-    lib.mkEnableOption (
-      lib.mdDoc "Load the Intel GPU kernel module at stage 1 boot. (Added to `boot.initrd.kernelModules`)"
-    )
-    // {
-      default = true;
-    };
-
-  config = {
-    boot.initrd.kernelModules = [ config.hardware.intelgpu.driver ];
-
-    environment.variables = {
-      VDPAU_DRIVER = lib.mkIf config.hardware.opengl.enable (lib.mkDefault "va_gl");
-    };
-
-    hardware.opengl.extraPackages = with pkgs; [
-      vaapiIntel
-      libvdpau-va-gl
-      intel-media-driver
-    ];
-
-    hardware.opengl.extraPackages32 = with pkgs.driversi686Linux; [
-       intel-vaapi-driver
-      libvdpau-va-gl
-      intel-media-driver
-    ];
-
-    # I don't think I need this as I am running 6.9.4 currently
-    # assertions = [
-    #   {
-    #     assertion = (
-    #       config.hardware.intelgpu.driver != "xe"
-    #       || lib.versionAtLeast config.boot.kernelPackages.kernel.version "6.8"
-    #     );
-    #     message = "Intel Xe GPU driver is not supported on kernels earlier than 6.8. Update or use the i915 driver.";
-    #   }
-    # ];
-  };
-
 }
