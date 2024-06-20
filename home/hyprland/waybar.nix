@@ -43,7 +43,7 @@
 
         # Module configurations
         "hyprland/workspaces" = {
-          format = "{name}: {windows}|";
+          format = "{name}: {windows} |";
           format-window-separator = " ";
           window-rewrite-default = "";
           window-rewrite = {
@@ -78,7 +78,7 @@
         idle_inhibitor = {
           format = "{icon}";
           format-icons = {
-            activated = "󰈈";
+            activated = "󰈈 ";
             deactivated = " ";
           };
         };
@@ -94,14 +94,14 @@
         };
 
         memory = {
-          format = "{}% ";
+          format = "{}%  ";
         };
 
         temperature = {
           thermal-zone = 13;
           critical-threshold = 80;
-          format-critical = "{temperatureC}C";
-          format = "{temperatureC}C";
+          format-critical = "{temperatureC}C {icon}";
+          format = "{temperatureC}C {icon}";
           format-icons = ["" "" ""];
         };
 
@@ -116,7 +116,8 @@
             warning = 30;
             critical = 15;
           };
-          format = "{capacity}% {icon} {:%H:%M}";
+          format = "{capacity}% {icon} {time}";
+          format-time = "{H}:{M}";
           format-full = "{capacity}% {icon}";
           format-charging = "{capacity}% 󰂄";
           format-plugged = "{capacity}% 󰚥";
