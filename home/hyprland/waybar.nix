@@ -18,10 +18,11 @@
         modules-left = [
           "hyprland/workspaces"
           "hyprland/submap"
+          "hyprland/window"
         ];
 
         modules-center = [
-          "hyprland/window"
+          "clock"
         ];
         modules-right = [
           "tray"
@@ -85,7 +86,7 @@
 
         clock = {
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-          format = "{:%Y-%m-%d|%H:%M}";
+          format = "{:%Y-%m-%d | %H:%M}";
         };
 
         cpu = {
