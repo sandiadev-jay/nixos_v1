@@ -43,7 +43,7 @@
 
         # Module configurations
         "hyprland/workspaces" = {
-          format = "{name}: {windows} |";
+          format = "{name}: {windows}|";
           format-window-separator = " ";
           window-rewrite-default = "";
           window-rewrite = {
@@ -79,13 +79,13 @@
           format = "{icon}";
           format-icons = {
             activated = "󰈈";
-            deactivated = "";
+            deactivated = " ";
           };
         };
 
         clock = {
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-          format = "{:%Y-%m-%d | %H:%M}";
+          format = "{:%Y-%m-%d|%H:%M}";
         };
 
         cpu = {
@@ -116,7 +116,7 @@
             warning = 30;
             critical = 15;
           };
-          format = "{capacity}% {icon} {time}";
+          format = "{capacity}% {icon} {:%H:%M}";
           format-full = "{capacity}% {icon}";
           format-charging = "{capacity}% 󰂄";
           format-plugged = "{capacity}% 󰚥";
@@ -126,7 +126,7 @@
         network = {
           format-wifi = "{essid} ({signalStrength}%) {icon}";
           format-ethernet = "{ipaddr}/{cidr} 󰈀";
-          tooltip-format = "{ifname} via {gwaddr} ";
+          tooltip-format = "{ifname} via {gwaddr}";
           format-linked = "{ifname} (No IP) ";
           format-disconnected = "Disconnected ⚠";
           format-alt = "{ifname}: {ipaddr}/{cidr}";
