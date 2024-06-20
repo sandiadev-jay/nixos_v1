@@ -9,14 +9,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland = {
-      # url = "git+https://github.com/hyprwm/Hyprland?submodules=1";  # Main Branch (latest)
-      url = "git+https://github.com/hyprwm/Hyprland?rev=ea2501d4556f84d3de86a4ae2f4b22a474555b9f&submodules=1";  # (v0.41.0)
+      url = "git+https://github.com/hyprwm/Hyprland?submodules=1";  # Main Branch (latest)
+      # url = "git+https://github.com/hyprwm/Hyprland?rev=ea2501d4556f84d3de86a4ae2f4b22a474555b9f&submodules=1";  # (v0.41.0)
       # url = "github:hyprwm/Hyprland?submodules=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hy3 = {
-      # url = "github:outfoxxed/hy3";  # Main Branch (Latest)
-      url = "github:outfoxxed/hy3?rev=5693ea255455c0c35d97353031de80def61f1e15";  # (v0.41.0) versions used because of build errors
+      url = "github:outfoxxed/hy3";  # Main Branch (Latest)
+      # url = "github:outfoxxed/hy3?rev=5693ea255455c0c35d97353031de80def61f1e15";  # (v0.41.0) versions used because of build errors
       inputs.hyprland.follows = "hyprland";
     };
   };
