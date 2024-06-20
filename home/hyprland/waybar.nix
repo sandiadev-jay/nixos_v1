@@ -43,7 +43,7 @@
 
         # Module configurations
         "hyprland/workspaces" = {
-          format = "{name}: {windows} |";
+          format = "{name}:{windows} |";
           format-window-separator = " ";
           window-rewrite-default = "";
           window-rewrite = {
@@ -78,7 +78,7 @@
         idle_inhibitor = {
           format = "{icon}";
           format-icons = {
-            activated = "󰈈 ";
+            activated = "󰈈";
             deactivated = " ";
           };
         };
@@ -89,24 +89,24 @@
         };
 
         cpu = {
-          format = "{usage}% ";
+          format = "{usage}%";
           tooltip = "CPU Usage {usage}%";
         };
 
         memory = {
-          format = "{}%  ";
+          format = "{}% ";
         };
 
         temperature = {
           thermal-zone = 13;
           critical-threshold = 80;
-          format-critical = "{temperatureC}C {icon}";
-          format = "{temperatureC}C {icon}";
+          format-critical = "{temperatureC}C{icon}";
+          format = "{temperatureC}C{icon}";
           format-icons = ["" "" ""];
         };
 
         backlight = {
-          format = "{percent}% {icon}";
+          format = "{percent}%{icon}";
           format-icons = ["" "" "" "" "" "" "" "" "" "" "" "" "" "" ""];
         };
 
@@ -116,7 +116,7 @@
             warning = 30;
             critical = 15;
           };
-          format = "{capacity}% {icon} {time}";
+          format = "{capacity}%{icon} {time}";
           format-time = "{H}:{M}";
           format-full = "{capacity}% {icon}";
           format-charging = "{capacity}% 󰂄";
@@ -125,8 +125,8 @@
         };
 
         network = {
-          format-wifi = "{essid} ({signalStrength}%) {icon}";
-          format-ethernet = "{ipaddr}/{cidr} 󰈀";
+          format-wifi = "{essid} ({signalStrength}%){icon}";
+          format-ethernet = "{ipaddr}/{cidr}󰈀";
           tooltip-format = "{ifname} via {gwaddr}";
           format-linked = "{ifname} (No IP) ";
           format-disconnected = "Disconnected ⚠";
@@ -136,12 +136,12 @@
 
         pulseaudio = {
           # // "scroll-step": 1; // %; can be a float
-          format = "{volume}% {icon}  {format_source}";
-          format-bluetooth = "{volume}% {icon}  {format_source}";
-          format-bluetooth-muted = "󰸈 {icon}  {format_source}";
-          format-muted = "{volume}% 󰸈  {format_source}";
-          format-source = "{volume}% ";
-          format-source-muted = "{volume}% 󰍭";
+          format = "{volume}%{icon}|{format_source}";
+          format-bluetooth = "{volume}%{icon}||{format_source}";
+          format-bluetooth-muted = "󰸈 {icon}||{format_source}";
+          format-muted = "{volume}%󰸈|{format_source}";
+          format-source = "{volume}%";
+          format-source-muted = "{volume}%󰍭";
           format-icons = {
               headphone = "";
               hands-free = "";
