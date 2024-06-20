@@ -95,7 +95,10 @@ button:hover {
     color: #ffffff;
 }
 
-#window,
+#window {
+    text-align: center;
+}
+
 #workspaces {
     margin: 0 5px 0 5px;
 }
