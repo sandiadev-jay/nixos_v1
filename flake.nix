@@ -15,7 +15,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hy3 = {
-      url = "github:outfoxxed/hy3?ref=hl0.41.0";
+      url = "github:outfoxxed/hy3?ref/tag/hl0.41.0";
       inputs.hyprland.follows = "hyprland";
     };
   };
