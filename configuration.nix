@@ -60,12 +60,12 @@
     powerOnBoot = true;
   };
 
-  # Enable OpenGL
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
+  # Enable OpenGL (moved to nvidia.nix)
+  # hardware.opengl = {
+  #   enable = true;
+  #   driSupport = true;
+  #   driSupport32Bit = true;
+  # };
 
   # Enable sound with pipewire
   sound.enable = false;
