@@ -16,7 +16,7 @@
       intel-vaapi-driver
       libvdpau-va-gl
       intel-media-driver
-    ]
+    ];
   };
 
   # Load nvidia driver for Xorg and Wayland
