@@ -33,8 +33,13 @@
   # Partition swapfile is on (after LUKS decryption)
   boot.resumeDevice = "/dev/disk/by-uuid/4b7bc006-9c2f-4a56-9984-8f515c20a4cf";
   # Resume Offset is offset of swapfile
-  boot.kernelParams = [ "resume_offset=32870400" "i915.enable_guc=2" ];
+  boot.kernelParams = [ "resume_offset=32870400" ];
 
+  # This will save you money and maybe your life?
+  services.thermald.enable = true;
+
+  # Because I have an SSD
+  services.fstrim.enable = lib.mkDefault true;
 
   # Having kernel security enabled prevents hibernation
   security.protectKernelImage = false;

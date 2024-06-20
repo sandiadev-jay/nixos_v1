@@ -90,6 +90,9 @@
     enable = true;
   };
 
+  # Enable power management
+  powerManagement.enable = true;
+
   # Configure suspend-then-hibernate settings
   services.logind = {
     lidSwitch = "hybrid-sleep";
