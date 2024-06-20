@@ -31,6 +31,7 @@
         ./xdg-mime.nix
         ./custom-hardware-config.nix # This replaces hardware-configuration.nix
         ./fonts.nix
+        ./nvidia.nix # Adding Nvidia support
         # Home manager as a module of nixos
         # So home-manager configurations are deployed with nixos-rebuild switch
         home-manager.nixosModules.home-manager {
