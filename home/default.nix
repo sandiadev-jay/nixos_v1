@@ -52,6 +52,7 @@
     cmake
     python312
     python312Packages.conda
+    python312Packages.pip
 
     # wine
     wineWowPackages.waylandFull
