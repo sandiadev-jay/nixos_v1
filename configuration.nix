@@ -32,6 +32,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.networkmanager.wifi.powersave = false;
   
   # Enable polkit
   security.polkit.enable = true;
