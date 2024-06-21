@@ -232,6 +232,8 @@
         "$mod CTRL SHIFT, 8, movetoworkspacesilent, 8"
         "$mod CTRL SHIFT, 9, movetoworkspacesilent, 9"
         "$mod CTRL SHIFT, 0, movetoworkspacesilent, 10"
+        "$mod CTRL SHIFT, PERIOD, movetoworkspacesilent, +1"
+        "$mod CTRL SHIFT, COMMA, movetoworkspacesilent, -1"
         "$mod CTRL SHIFT, KP_END, movetoworkspacesilent, 1"
         "$mod CTRL SHIFT, KP_DOWN, movetoworkspacesilent, 2"
         "$mod CTRL SHIFT, KP_NEXT, movetoworkspacesilent, 3"
@@ -268,6 +270,8 @@
 
         # Group Binds
         "$mod, T, togglegroup"
+        "$mod CTRL, right, changegroupactive, f"
+        "$mod CTRL, left, changegroupactive, b"
 
         # Focus last focused window
         "$mod, TAB, focuscurrentorlast"
