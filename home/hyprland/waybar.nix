@@ -22,7 +22,6 @@
         ];
 
         modules-center = [
-          "clock"
         ];
         modules-right = [
           "tray"
@@ -39,6 +38,7 @@
           # "hyprland/language"
           "battery"
           # "battery#bat2"
+          "clock"
         ];
 
         # Module configurations
