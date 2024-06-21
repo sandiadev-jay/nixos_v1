@@ -117,7 +117,7 @@
             critical = 15;
           };
           format = "{capacity}% {icon} {time}";
-          format-time = "{H}:{M}";
+          format-time = "{H}h {M}m";
           format-full = "{capacity}% {icon}";
           format-charging = "{capacity}% 󰂄";
           format-plugged = "{capacity}% 󰚥";
