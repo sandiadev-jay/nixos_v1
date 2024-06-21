@@ -18,10 +18,10 @@
         modules-left = [
           "hyprland/workspaces"
           "hyprland/submap"
-          "hyprland/window"
         ];
 
         modules-center = [
+          "hyprland/window"
         ];
         modules-right = [
           "tray"
