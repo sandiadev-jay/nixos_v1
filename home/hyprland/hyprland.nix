@@ -24,104 +24,6 @@
     settings = {
       "$mod" = "SUPER";
 
-      # plugin = {
-      #   hy3 = {
-      #     # disable gaps when only one window is onscreen
-      #     # 0 - always show gaps
-      #     # 1 - hide gaps with a single window onscreen
-      #     # 2 - 1 but also show the window border
-      #     no_gaps_when_only = 1; # default: 0 
-
-      #     # policy controlling what happens when a node is removed from a group,
-      #     # leaving only a group
-      #     # 0 = remove the nested group
-      #     # 1 = keep the nested group
-      #     # 2 = keep the nested group only if its parent is a tab group
-      #     node_collapse_policy = 2; # default: 2
-
-      #     # offset from group split direction when only one window is in a group
-      #     group_inset = 10; # default: 10
-
-      #     # if a tab group will automatically be created for the first window spawned in a workspace
-      #     tab_first_window = false;
-
-      #     # tab group settings
-      #     tabs = {
-      #       # height of the tab bar
-      #       height = 15; # default: 15
-
-      #       # padding between the tab bar and its focused node
-      #       padding = 5; # default: 5
-
-      #       # the tab bar should animate in/out from the top instead of below the window
-      #       from_top = false; # default: false
-
-      #       # rounding of tab bar corners
-      #       rounding = 0; # default: 3
-
-      #       # render the window title on the bar
-      #       render_text = true; # default: true
-
-      #       # center the window title
-      #       text_center = true; # default: false
-
-      #       # font to render the window title with
-      #       text_font = "Sans"; # default: Sans
-
-      #       # height of the window title
-      #       text_height = 8; # default: 8
-
-      #       # left padding of the window title
-      #       text_padding = 3; # default: 3
-
-      #       # active tab bar segment color
-      #       "col.active" = "0xff32b4ff"; # default: 0xff32b4ff
-
-      #       # urgent tab bar segment color
-      #       "col.urgent" = "0xffff4f4f"; # default: 0xffff4f4f
-
-      #       # inactive tab bar segment color
-      #       "col.inactive" = "0x80808080"; # default: 0x80808080
-
-      #       # active tab bar text color
-      #       "col.text.active" = "0xff000000"; # default: 0xff000000
-
-      #       # urgent tab bar text color
-      #       "col.text.urgent" = "0xff000000"; # default: 0xff000000
-
-      #       # inactive tab bar text color
-      #       "col.text.inactive" = "0xff000000"; # default: 0xff000000
-      #     };
-
-      #     # autotiling settings
-      #     autotile = {
-      #       # enable autotile
-      #       enable = false; # default: false
-
-      #       # make autotile-created groups ephemeral
-      #       ephemeral_groups = true; # default: true
-
-      #       # if a window would be squished smaller than this width, a vertical split will be created
-      #       # -1 = never automatically split vertically
-      #       # 0 = always automatically split vertically
-      #       # <number> = pixel height to split at
-      #       trigger_width = 0; # default: 0
-
-      #       # if a window would be squished smaller than this height, a horizontal split will be created
-      #       # -1 = never automatically split horizontally
-      #       # 0 = always automatically split horizontally
-      #       # <number> = pixel height to split at
-      #       trigger_height = 0; # default: 0
-
-      #       # a space or comma separated list of workspace ids where autotile should be enabled
-      #       # it's possible to create an exception rule by prefixing the definition with "not:"
-      #       # workspaces = 1,2 # autotiling will only be enabled on workspaces 1 and 2
-      #       # workspaces = not:1,2 # autotiling will be enabled on all workspaces except 1 and 2
-      #       workspaces = "all"; # default: all
-      #     };
-      #   };
-      # };
-
       general = {
         gaps_in = 2;
         gaps_out = 4;
@@ -174,7 +76,7 @@
         "3, monitor:desc:Samsung Electric Company U32R59x H4ZM712156, default:true"
       ];
 
-      # Dwindle is standard - use mod P to toggle
+      # Dwindle is standard - use mod P to toggle pseudotile
       dwindle = {
         pseudotile = true; 
         preserve_split = true;
@@ -258,20 +160,12 @@
         "$mod, right, movefocus, r"
         "$mod, up, movefocus, u"
         "$mod, down, movefocus, d"        
-        # "$mod, left, hy3:movefocus, l"
-        # "$mod, right, hy3:movefocus, r"
-        # "$mod, up, hy3:movefocus, u"
-        # "$mod, down, hy3:movefocus, d"
 
         # Move window
-        "$mod SHIFT, left, movewindow, l"
-        "$mod SHIFT, right, movewindow, r"
-        "$mod SHIFT, up, movewindow, u"
-        "$mod SHIFT, down, movewindow, d"
-        # "$mod SHIFT, left, hy3:movewindow, l"
-        # "$mod SHIFT, right, hy3:movewindow, r"
-        # "$mod SHIFT, up, hy3:movewindow, u"
-        # "$mod SHIFT, down, hy3:movewindow, d"
+        "$mod SHIFT, left, movewindoworgroup, l"
+        "$mod SHIFT, right, movewindoworgroup, r"
+        "$mod SHIFT, up, movewindoworgroup, u"
+        "$mod SHIFT, down, movewindoworgroup, d"
 
         # Move workspace in a certain direction
         "$mod ALT CTRL, left, movecurrentworkspacetomonitor, l"
@@ -290,6 +184,8 @@
         "$mod, 8, workspace, 8"
         "$mod, 9, workspace, 9"
         "$mod, 0, workspace, 10"
+        "$mod, PERIOD, workspace, +1"
+        "$mod, COMMA, workspace, -1"
         "$mod, KP_END, workspace, 1"
         "$mod, KP_DOWN, workspace, 2"
         "$mod, KP_NEXT, workspace, 3"
@@ -312,6 +208,8 @@
         "$mod SHIFT, 8, movetoworkspace, 8"
         "$mod SHIFT, 9, movetoworkspace, 9"
         "$mod SHIFT, 0, movetoworkspace, 10"
+        "$mod SHIFT, PERIOD, movetoworkspace, +1"
+        "$mod SHIFT, COMMA, movetoworkspace, -1"
         "$mod SHIFT, KP_END, movetoworkspace, 1"
         "$mod SHIFT, KP_DOWN, movetoworkspace, 2"
         "$mod SHIFT, KP_NEXT, movetoworkspace, 3"
@@ -322,26 +220,6 @@
         "$mod SHIFT, KP_UP, movetoworkspace, 8"
         "$mod SHIFT, KP_PRIOR, movetoworkspace, 9"
         "$mod SHIFT, KP_INSERT, movetoworkspace, 10"
-        # "$mod SHIFT, 1, hy3:movetoworkspace, 1, follow"
-        # "$mod SHIFT, 2, hy3:movetoworkspace, 2, follow"
-        # "$mod SHIFT, 3, hy3:movetoworkspace, 3, follow"
-        # "$mod SHIFT, 4, hy3:movetoworkspace, 4, follow"
-        # "$mod SHIFT, 5, hy3:movetoworkspace, 5, follow"
-        # "$mod SHIFT, 6, hy3:movetoworkspace, 6, follow"
-        # "$mod SHIFT, 7, hy3:movetoworkspace, 7, follow"
-        # "$mod SHIFT, 8, hy3:movetoworkspace, 8, follow"
-        # "$mod SHIFT, 9, hy3:movetoworkspace, 9, follow"
-        # "$mod SHIFT, 0, hy3:movetoworkspace, 10, follow"
-        # "$mod SHIFT, KP_END, hy3:movetoworkspace, 1, follow"
-        # "$mod SHIFT, KP_DOWN, hy3:movetoworkspace, 2, follow"
-        # "$mod SHIFT, KP_NEXT, hy3:movetoworkspace, 3, follow"
-        # "$mod SHIFT, KP_LEFT, hy3:movetoworkspace, 4, follow"
-        # "$mod SHIFT, KP_BEGIN, hy3:movetoworkspace, 5, follow"
-        # "$mod SHIFT, KP_RIGHT, hy3:movetoworkspace, 6, follow"
-        # "$mod SHIFT, KP_HOME, hy3:movetoworkspace, 7, follow"
-        # "$mod SHIFT, KP_UP, hy3:movetoworkspace, 8, follow"
-        # "$mod SHIFT, KP_PRIOR, hy3:movetoworkspace, 9, follow"
-        # "$mod SHIFT, KP_INSERT, hy3:movetoworkspace, 10, follow"
 
         # Move active window but don't follow
         "$mod CTRL SHIFT, 1, movetoworkspacesilent, 1"
@@ -364,26 +242,6 @@
         "$mod CTRL SHIFT, KP_UP, movetoworkspacesilent, 8"
         "$mod CTRL SHIFT, KP_PRIOR, movetoworkspacesilent, 9"
         "$mod CTRL SHIFT, KP_INSERT, movetoworkspacesilent, 10"
-        # "$mod CTRL SHIFT, 1, hy3:movetoworkspace, 1"
-        # "$mod CTRL SHIFT, 2, hy3:movetoworkspace, 2"
-        # "$mod CTRL SHIFT, 3, hy3:movetoworkspace, 3"
-        # "$mod CTRL SHIFT, 4, hy3:movetoworkspace, 4"
-        # "$mod CTRL SHIFT, 5, hy3:movetoworkspace, 5"
-        # "$mod CTRL SHIFT, 6, hy3:movetoworkspace, 6"
-        # "$mod CTRL SHIFT, 7, hy3:movetoworkspace, 7"
-        # "$mod CTRL SHIFT, 8, hy3:movetoworkspace, 8"
-        # "$mod CTRL SHIFT, 9, hy3:movetoworkspace, 9"
-        # "$mod CTRL SHIFT, 0, hy3:movetoworkspace, 10"
-        # "$mod CTRL SHIFT, KP_END, hy3:movetoworkspace, 1"
-        # "$mod CTRL SHIFT, KP_DOWN, hy3:movetoworkspace, 2"
-        # "$mod CTRL SHIFT, KP_NEXT, hy3:movetoworkspace, 3"
-        # "$mod CTRL SHIFT, KP_LEFT, hy3:movetoworkspace, 4"
-        # "$mod CTRL SHIFT, KP_BEGIN, hy3:movetoworkspace, 5"
-        # "$mod CTRL SHIFT, KP_RIGHT, hy3:movetoworkspace, 6"
-        # "$mod CTRL SHIFT, KP_HOME, hy3:movetoworkspace, 7"
-        # "$mod CTRL SHIFT, KP_UP, hy3:movetoworkspace, 8"
-        # "$mod CTRL SHIFT, KP_PRIOR, hy3:movetoworkspace, 9"
-        # "$mod CTRL SHIFT, KP_INSERT, hy3:movetoworkspace, 10"
 
         # Scratchpad workspace
         "$mod, S, togglespecialworkspace, magic"
@@ -407,6 +265,13 @@
 
         # Screen lock shortcut
         "$mod, L, exec, pidof hyprlock || (loginctl lock-session)"
+
+        # Group Binds
+        "$mod, T, togglegroup"
+
+        # Focus last focused window
+        "$mod, TAB, focuscurrentorlast"
+        "$mod, GRAVE, focusurgentorlast"
 
         # Hy3 binds
         # "$mod, V, hy3:makegroup, v,"
