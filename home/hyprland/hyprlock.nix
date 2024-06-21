@@ -67,7 +67,7 @@
           position = "0, -600";
           halign = "center";
           valign = "top";
-          shadow_pass = 3;
+          shadow_passes = 3;
           shadow_size = 3;
           shadow_color = "rgb(0, 0, 0)";
           shadow_boost = 1.2;
@@ -83,7 +83,7 @@
           position = "0, 100";
           halign = "center";
           valign = "center";
-          shadow_pass = 3;
+          shadow_passes = 3;
           shadow_size = 3;
           shadow_color = "rgb(0, 0, 0)";
           shadow_boost = 1.2;
