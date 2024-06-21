@@ -102,6 +102,7 @@
         "float, title:^(Open File)$"
       ];
 
+      # Launch programs at start
       exec-once = [
         "1password"
         "waybar"
@@ -112,6 +113,7 @@
         ''hyprctl setcursor "McMojave-cursors" 24''
       ];
 
+      # Set environment variables
       env = [
         "GTK_THEME,WhiteSur-Dark"
         "GTK_ICON_THEME,WhiteSur-red-dark"
