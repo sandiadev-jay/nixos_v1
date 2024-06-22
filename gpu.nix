@@ -5,8 +5,6 @@
   # Enable OpenGL
   hardware.opengl = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;  # Set Nvidia driver (to fix NVK requires nouveau errors)
     extraPackages = with pkgs; [
       intel-vaapi-driver
