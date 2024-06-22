@@ -2,8 +2,8 @@
 
 {
 
-  # Enable OpenGL
-  hardware.opengl = {
+  # Enable OpenGL (renamed to graphics)
+  hardware.graphics = {
     enable = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;  # Set Nvidia driver (to fix NVK requires nouveau errors)
     extraPackages = with pkgs; [
