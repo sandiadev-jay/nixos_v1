@@ -7,6 +7,7 @@
     enable = true;
     driSupport = true;
     driSupport32Bit = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;  # Set Nvidia driver (to fix NVK requires nouveau errors)
     extraPackages = with pkgs; [
       intel-vaapi-driver
       libvdpau-va-gl
@@ -22,6 +23,10 @@
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
 
+  # Accept Nvidia license
+  nixpkgs.config.nvidia.acceptLicense = true;
+
+  # Nvidia config
   hardware.nvidia = {
 
     # Modesetting is required.

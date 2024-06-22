@@ -43,7 +43,7 @@
     firefox
     google-chrome
     brave
-    lynx  # CLI browser
+    # lynx  # CLI browser
     
     # development tools
     vscode-fhs
