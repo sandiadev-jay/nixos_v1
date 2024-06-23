@@ -86,6 +86,7 @@
     btop  # replacement of htop/nmon
     iotop # io monitoring
     iftop # network monitoring
+    nvtopPackages.full  # GPU monitoring
     sysstat
     lm_sensors # for `sensors` command
     ethtool
