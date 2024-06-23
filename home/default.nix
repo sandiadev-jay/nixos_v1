@@ -87,9 +87,10 @@
     iotop # io monitoring
     iftop # network monitoring
     nvtopPackages.full  # GPU monitoring
-    sysstat
+    gpustat  # GPU monitoring
+    sysstat  # for iostat command
     lm_sensors # for `sensors` command
-    ethtool
+    ethtool  # for ethernet stuff
     pciutils # lspci
     usbutils # lsusb
     mesa-demos # testing hardware acceleration
