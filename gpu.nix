@@ -5,8 +5,6 @@
   # Enable OpenGL (renamed to graphics)
   hardware.graphics = {
     enable = true;
-    # This appears to have made my GPU unfindable
-    # package = config.boot.kernelPackages.nvidiaPackages.stable;  # Set Nvidia driver (to fix NVK requires nouveau errors)
     extraPackages = with pkgs; [
       intel-vaapi-driver
       libvdpau-va-gl
@@ -35,8 +33,7 @@
     # Enable this if you have graphical corruption issues or application crashes after waking
     # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead 
     # of just the bare essentials.
-    powerManagement.enable = true;  # Setting back to false to try to fix hibernate issues
-
+    powerManagement.enable = true;
     # Fine-grained power management. Turns off GPU when not in use.
     # Experimental and only works on modern Nvidia GPUs (Turing or newer).
     powerManagement.finegrained = false;

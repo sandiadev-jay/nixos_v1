@@ -15,7 +15,7 @@
         batt_status = ''"$(cat /sys/class/power_supply/AC/online)"'';
         screen_on = "hyprctl dispatch dpms on";
         screen_off = "hyprctl dispatch dpms off";
-        sleep = "systemctl hybrid-sleep";
+        sleep = "systemctl suspend-then-hibernate";
       in
       [
         {

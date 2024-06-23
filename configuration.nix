@@ -96,7 +96,7 @@
 
   # Configure suspend-then-hibernate settings
   services.logind = {
-    lidSwitch = "hybrid-sleep";
+    lidSwitch = "suspend-then-hibernate";
     extraConfig = ''
       HandlePowerKey=hibernate
     '';
