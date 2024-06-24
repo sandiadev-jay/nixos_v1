@@ -68,7 +68,8 @@
   # xe requires linux kernelt 6.8 or newer (running 6.9.4)
   # Trying out the new "xe" driver (other option "i915")
   # Load the Intel GPU kernel module at stage 1 boot (added to 'boot.initrd.kernelModules').
-  boot.initrd.kernelModules = [ "xe" ];
+  # boot.initrd.kernelModules = [ "xe" ];
+  boot.initrd.kernelModules = [ "i915" ];  # might fix sleep
   
   environment.variables = {
     VDPAU_DRIVER = "va_gl";
