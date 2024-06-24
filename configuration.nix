@@ -96,13 +96,14 @@
   powerManagement.enable = true;
 
   # Configure suspend-then-hibernate settings
+  # Nvidia only supports "suspend" and "hibernate" without hackiness
   services.logind = {
-    lidSwitch = "suspend-then-hibernate";
+    lidSwitch = "suspend";
     extraConfig = ''
       HandlePowerKey=hibernate
     '';
   };
-  systemd.sleep.extraConfig = "HibernateDelaySec=2h";  
+  # systemd.sleep.extraConfig = "HibernateDelaySec=2h";  
 
   # Enable Upower
   services.upower.enable = true; 

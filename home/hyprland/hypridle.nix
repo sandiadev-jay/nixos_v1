@@ -15,7 +15,7 @@
         batt_status = ''"$(cat /sys/class/power_supply/AC/online)"'';
         screen_on = "hyprctl dispatch dpms on";
         screen_off = "hyprctl dispatch dpms off";
-        sleep = "systemctl suspend-then-hibernate";
+        sleep = "systemctl suspend";  # Nvidia only supports "suspend" and "hibernate" without hackiness 
       in
       [
         {
