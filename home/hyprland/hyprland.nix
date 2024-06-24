@@ -270,8 +270,8 @@
 
         # Group Binds
         "$mod, T, togglegroup"
-        "$mod CTRL, right, changegroupactive, f"
-        "$mod CTRL, left, changegroupactive, b"
+        "$mod ALT, right, changegroupactive, f"
+        "$mod ALT, left, changegroupactive, b"
 
         # Focus last focused window
         "$mod, TAB, focuscurrentorlast"
