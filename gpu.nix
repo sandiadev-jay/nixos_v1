@@ -62,7 +62,7 @@
     # Laptop required config for dual GPU setup
     prime = {
       # sync.enable = true;
-      offlad = {
+      offload = {
         enable = true;
         enableOffloadCmd = true;
       };
