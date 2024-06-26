@@ -66,6 +66,7 @@
     lm_sensors # for `sensors` command
     ethtool  # for ethernet stuff
     pciutils # lspci
+    powertop  # power use tool
     usbutils # lsusb
     mesa-demos # testing hardware acceleration
     wev  # tool for identifying input keys
