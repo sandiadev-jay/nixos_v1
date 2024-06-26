@@ -94,6 +94,7 @@
 
   # Enable power management
   powerManagement.enable = true;
+  powerManagement.powertop.enable = true;
 
   # Configure suspend-then-hibernate settings
   # Nvidia only supports "suspend" and "hibernate" without hackiness
