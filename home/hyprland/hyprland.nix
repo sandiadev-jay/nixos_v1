@@ -6,19 +6,12 @@
   services.swaync.enable = true;
   programs.wofi.enable = true;
 
-  # imports = [ inputs.hyprland.homeManagerModules.default ];
   # Hyprland setup
   wayland.windowManager.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     systemd.enable = true;
     systemd.variables = ["--all"];
     xwayland.enable = true;
-
-    # Hyprland plugins
-    # plugins = [
-    #   inputs.hy3.packages.${pkgs.system}.hy3
-    # ];
 
     # Hyprland config 
     settings = {
@@ -38,7 +31,7 @@
       decoration = {
         rounding = 5;
         blur = {
-          enabled = true;
+          enabled = false;
           size = 3;
           passes = 1;
         };
@@ -49,7 +42,7 @@
       };
 
       animations = {
-        enabled = true;
+        enabled = false;
         bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
         animation = [
           "windowsIn, 0, 7, myBezier"
@@ -83,11 +76,6 @@
         force_split = 2;
         no_gaps_when_only = 1;
       };
-
-      # Master is alternate, new is master
-      # master = {
-      #   new_is_master = true;
-      # };
 
       misc = {
         force_default_wallpaper = 0;
@@ -276,15 +264,6 @@
         # Focus last focused window
         "$mod, TAB, focuscurrentorlast"
         "$mod, GRAVE, focusurgentorlast"
-
-        # Hy3 binds
-        # "$mod, V, hy3:makegroup, v,"
-        # "$mod, B, hy3:makegroup, h,"
-        # "$mod, T, hy3:makegroup, tab,"
-        # "$mod, A, hy3:changefocus, raise"
-        # "$mod SHIFT, A, hy3:changefocus, lower"
-        # "$mod, J, hy3:changegroup, opposite"  # Hy3
-        # "$mod SHIFT, T, hy3:changegroup, toggletab"
       ];
 
       bindm = [
@@ -292,12 +271,6 @@
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
       ];
-
-      # bindn = [
-      #   ", mouse:272, hy3:focustab, mouse"
-      #   ", mouse_down, hy3:focustab, l, require_hovered"
-      #   ", mouse_up, hy3:focustab, r, require_hovered"
-      # ];
     };
   };
 }
