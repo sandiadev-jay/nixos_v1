@@ -7,7 +7,6 @@
     ./hyprland
     ./mime
     ./apps
-    ./sway
   ];
   
   # TODO please change the username & home directory to your own
