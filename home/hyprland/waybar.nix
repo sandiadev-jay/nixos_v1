@@ -18,10 +18,14 @@
         modules-left = [
           "hyprland/workspaces"
           "hyprland/submap"
+          "sway/workspaces"
+          "sway/mode"
+          "wlr/taskbar"
         ];
 
         modules-center = [
           "hyprland/window"
+          "sway/window"
         ];
         modules-right = [
           "tray"
