@@ -16,10 +16,10 @@
 
 
       # Direction keys
-      left = "left";
-      right = "right";
-      up = "up";
-      down = "down";
+      left = "";
+      right = "";
+      up = "";
+      down = "";
 
       # Focus stuff
       focus = {
@@ -124,7 +124,6 @@
       bars = [ 
         { command = "waybar"; } 
       ];
-      # bars.waybar.command = "waybar";
 
       # Starting with border configs
       colors = {
