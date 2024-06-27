@@ -117,7 +117,7 @@
 
     # Bar
     bars = [ "waybar" ];
-    bars.waybar.command = "waybar";
+    # bars.waybar.command = "waybar";
 
     # Starting with border configs
     colors = {
