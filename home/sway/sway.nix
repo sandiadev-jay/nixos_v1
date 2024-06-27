@@ -176,9 +176,9 @@
 
         # Focused
         focused = {
-          background = "#285577";
+          background = "#0ADD08";
           border = "#0ADD08";
-          childBorder = "#285577";
+          childBorder = "#0ADD08";
           indicator = "#2e9ef4";
           text = "#ffffff";
         };
