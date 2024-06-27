@@ -131,6 +131,9 @@
           natural_scroll = "enabled";
           middle_emulation = "enabled";
         };
+        "type:keyboard" = {
+          xkb_numlock = "enabled";
+        };
       };
 
       # Modes (for layout)
@@ -174,7 +177,7 @@
         # Focused
         focused = {
           background = "#285577";
-          border = "#4c7899";
+          border = "#0ADD08";
           childBorder = "#285577";
           indicator = "#2e9ef4";
           text = "#ffffff";
