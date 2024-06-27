@@ -40,6 +40,18 @@
         "${mod}+Shift+R" = "reload";
         "${mod}+Space" = "exec wofi";  # App Launcher
 
+        # Brightness Control
+        "XF86MonBrightnessDown" = "exec brightnessctl set 5%-";
+        "XF86MonBrightnessUp" = "exec brightnessctl set +5%";
+
+        # Sound Control
+        "XF86AudioRaiseVolume" = "exec wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+";
+        "XF86AudioLowerVolume" = "exec wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%-";
+        "XF86AudioMute" = "exec wpctl set-mute";
+        "Ctrl+XF86AudioRaiseVolume" = "wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SOURCE@ 5%+";
+        "Ctrl+XF86AudioLowerVolume" = "wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SOURCE@ 5%-";
+        "Ctrl+XF86AudioMute" = "exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
+
         # Layout Stuff
         "${mod}+V" = "splitv";
         "${mod}+B" = "splith";
