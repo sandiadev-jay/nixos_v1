@@ -170,7 +170,7 @@
         smartBorders = "on";
         smartGaps = true;
         inner = 4;
-        outer = 2;
+        outer = 4;
       };
 
       # Window Settings
