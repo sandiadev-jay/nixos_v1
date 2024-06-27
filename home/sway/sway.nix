@@ -198,8 +198,12 @@
     # Extra Config
     # Touchpad gestures
     extraConfig = '' 
-      bindgesture swipe:right workspace prev
-      bindgesture swipe:left workspace next
+      bindgesture swipe:4:right workspace prev
+      bindgesture swipe:4:left workspace next
+      bindgesture swipe:3:right focus left
+      bindgesture swipe:3:left focus right
+      bindgesture swipe:3:down focus up
+      bindgesture swipe:3:up focus down
     '';
 
   };
