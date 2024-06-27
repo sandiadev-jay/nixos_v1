@@ -42,7 +42,7 @@
       };
 
       animations = {
-        enabled = false;
+        enabled = true;
         bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
         animation = [
           "windowsIn, 0, 7, myBezier"
@@ -81,7 +81,7 @@
         force_default_wallpaper = 0;
         mouse_move_enables_dpms = true;
         key_press_enables_dpms = true;
-        vfr = false;  # Frame rate reduction when no changes occur, true could save battery life
+        vfr = true;  # Frame rate reduction when no changes occur, true could save battery life
       };
 
       # Set floating windows
