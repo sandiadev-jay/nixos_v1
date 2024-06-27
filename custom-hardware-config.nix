@@ -49,13 +49,13 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp0s13f0u1u4u4.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp0s20f3.useDHCP = lib.mkDefault true;
+  networking.interfaces.enp0s13f0u1u4u4.useDHCP = lib.mkDefault true;
+  networking.interfaces.wlp0s20f3.useDHCP = lib.mkDefault true;
 
-  # Firmware packages
-  hardware.firmware = [
-    
-  ];
+  # Trying to fix iwlwifi errors
+  # boot.extraModprobeConfig = ''
+  #   options iwlwifi power_save=1 disable_11ax=1
+  # '';
 
   # Enabling Linux Vendor Firmware Service stuff
   services.fwupd.enable = true;
