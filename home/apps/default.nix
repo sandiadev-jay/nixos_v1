@@ -42,6 +42,7 @@
 
     # configuration
     nwg-look
+    nwg-displays
 
     # office tools
     libreoffice-qt6-still
