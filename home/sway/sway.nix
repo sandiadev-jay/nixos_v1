@@ -108,6 +108,16 @@
 
       };
 
+      # Inputs
+      input = {
+        "type:touchpad" = {
+          dwt = "enabled";
+          tap = "enabled";
+          natural_scroll = "enabled";
+          middle_emulation = "enabled";
+        };
+      };
+
       # Modes (for layout)
       modes = {
         resize = {
