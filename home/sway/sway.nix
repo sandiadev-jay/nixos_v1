@@ -4,6 +4,7 @@
   wayland.windowManager.sway = {
     enable = true;
     checkConfig = true;
+    swaynag.enable = true;  # Error bar
 
     config = {
 
@@ -11,7 +12,6 @@
       modifier = "Mod4";
       terminal = "kitty";
       workspaceAutoBackAndForth = true;  # Toggle current workspace to return to where I came from
-      swaynag.enable = true;  # Error bar
       menu = "wofi";
 
 
