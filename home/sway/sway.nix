@@ -108,6 +108,9 @@
 
       };
 
+      # Default workspace
+      defaultWorkspace = "workspace number 1";
+
       # Inputs
       input = {
         "type:touchpad" = {
