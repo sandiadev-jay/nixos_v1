@@ -121,7 +121,9 @@
       };
 
       # Bar
-      bars = [ "waybar" ];
+      bars = [ 
+        { command = "waybar"; } 
+      ];
       # bars.waybar.command = "waybar";
 
       # Starting with border configs
