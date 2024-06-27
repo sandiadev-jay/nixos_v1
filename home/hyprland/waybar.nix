@@ -61,21 +61,6 @@
           };
         };
 
-        "sway/workspaces" = {
-          format = "{name}:{windows} |";
-          format-window-separator = " ";
-          window-rewrite-default = "";
-          window-rewrite = {
-            chrome = "";
-            firefox = "󰈹";
-            code = "";
-            kitty = "";
-            nwg-look = "";
-            brave = "󰄛";
-            "1password" = "";
-          };
-        };
-
         keyboard-state = {
           numlock = true;
           capslock = true;
