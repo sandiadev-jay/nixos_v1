@@ -79,6 +79,7 @@
     # networking
     # samba4Full  # For file sharing between computers on the same network
     nmap  # For viewing devices connected to the network
+    nmapplet  # Network management applet
     # nmcli - this is already activated, just a reminder for myself
     # bluetoothctl - this is already activate, just a reminder for myself
   ];
