@@ -20,7 +20,7 @@
           "hyprland/submap"
           "sway/workspaces"
           "sway/mode"
-          "wlr/taskbar"
+          # "wlr/taskbar"
         ];
 
         modules-center = [

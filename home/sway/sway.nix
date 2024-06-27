@@ -205,6 +205,5 @@
       bindgesture swipe:3:down focus up
       bindgesture swipe:3:up focus down
     '';
-
   };
 }
