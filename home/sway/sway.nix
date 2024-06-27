@@ -169,8 +169,8 @@
       gaps = {
         smartBorders = "on";
         smartGaps = true;
-        inner = 2;
-        outer = 4;
+        inner = 4;
+        outer = 2;
       };
 
       # Window Settings
