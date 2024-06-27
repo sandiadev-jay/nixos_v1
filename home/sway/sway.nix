@@ -116,8 +116,10 @@
         "${mod}+Shift+0" = "move container to workspace number 10";
 
         # Move workspace in a certain direction
-        
-
+        "${mod}+Alt+Ctrl+Left" = "move workspace to output left";
+        "${mod}+Alt+Ctrl+Right" = "move workspace to output right";
+        "${mod}+Alt+Ctrl+Up" = "move workspace to output up";
+        "${mod}+Alt+Ctrl+Down" = "move workspace to output down";
       };
 
       # Default workspace
