@@ -16,10 +16,10 @@
 
 
       # Direction keys
-      left = "";
-      right = "";
-      up = "";
-      down = "";
+      left = "Left";
+      right = "Right";
+      up = "Up";
+      down = "Down";
 
       # Focus stuff
       focus = {
@@ -33,7 +33,7 @@
       # Key Binds
       keybindings = let 
         mod = config.wayland.windowManager.sway.config.modifier;
-      in lib.mkOptionDefault {
+      in {
         # Sway General Shortcuts
         "${mod}+Q" = "kill";
         "${mod}+Shift+E" = "exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'";
