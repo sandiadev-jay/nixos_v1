@@ -4,7 +4,7 @@
   # Ancillary service enablement
   # programs.waybar.enable = true;
   services.swaync.enable = true;
-  programs.wofi.enable = true;
+  # programs.wofi.enable = true;
 
   # Hyprland setup
   wayland.windowManager.hyprland = {
