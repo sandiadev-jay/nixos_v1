@@ -82,5 +82,8 @@
     networkmanagerapplet  # Network management applet
     # nmcli - this is already activated, just a reminder for myself
     # bluetoothctl - this is already activate, just a reminder for myself
+
+    # Application launcher
+    rofi-wayland-unwrapped
   ];
 }
