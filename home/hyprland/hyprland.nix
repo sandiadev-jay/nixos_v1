@@ -92,12 +92,11 @@
 
       # Launch programs at start
       exec-once = [
-        "1password"
+        # "1password"
         "waybar"
         "hypridle"
         "swaync"
-        "polkit-agent-helper-1"
-        "systemctl start --user polkit-gnome-authentication-agent-1"
+        "polkit-kde-authentication-agent-1"
         ''hyprctl setcursor "McMojave-cursors" 24''
       ];
 
