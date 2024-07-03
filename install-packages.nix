@@ -13,7 +13,8 @@
     ranger
     curl
     whitesur-gtk-theme
-    polkit_gnome
+    # polkit_gnome
+    polkit-kde-agent-1
     linuxHeaders
   ];
 
