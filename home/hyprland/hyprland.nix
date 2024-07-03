@@ -98,6 +98,7 @@
         "swaync"
         "polkit-kde-authentication-agent-1"
         ''hyprctl setcursor "McMojave-cursors" 24''
+        "nm-applet"
       ];
 
       # Set environment variables
